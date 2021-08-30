@@ -13,8 +13,8 @@ WHITE="\e[0m"
 PAD=40
 TMP=tmp
 
-function OK { echo -e "$GREEN[OK]$WHITE" ;}
-function KO { echo -e "$RED[KO]$WHITE" ;}
+function OK { printf "$GREEN[OK]$WHITE\n" ;}
+function KO { printf "$RED[KO]$WHITE\n" ;}
 
 # No args
 function checkNoArgs
