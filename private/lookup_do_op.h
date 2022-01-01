@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_op_lookup.h                                     :+:      :+:    :+:   */
+/*   lookup_do_op.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 16:43:00 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/13 12:15:04 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:10:36 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DO_OP_LOOKUP_H
-# define DO_OP_LOOKUP_H
+#ifndef LOOKUP_DO_OP_H
+# define LOOKUP_DO_OP_H
 
 typedef struct s_do_op	t_do_op;
 

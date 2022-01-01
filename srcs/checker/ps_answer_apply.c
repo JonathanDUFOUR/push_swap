@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 13:52:36 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:27:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:18:55 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "checker.h"
 #include "enum/e_ret.h"
 #include "type/t_lst.h"
-#include "do_op_lookup.h"
+#include "lookup_do_op.h"
 
 int	ps_answer_apply(void)
 {

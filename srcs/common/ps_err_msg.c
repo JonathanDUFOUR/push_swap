@@ -6,12 +6,12 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 09:50:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/28 23:42:53 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/30 21:39:08 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "err_msg_lookup.h"
+#include "lookup_err_msg.h"
 
 void	ps_err_msg(int err)
 {

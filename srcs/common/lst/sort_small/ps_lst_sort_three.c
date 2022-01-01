@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:03:10 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/20 16:36:51 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:17:37 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "type/t_lst.h"
+#include "lookup_do_op.h"
 #include "type/t_ans.h"
-#include "do_op_lookup.h"
+#include "type/t_lst.h"
 #include "enum/e_lst_id.h"
 #include "enum/e_ret.h"
 #include "enum/e_op.h"

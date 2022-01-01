@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   err_msg_lookup.h                                   :+:      :+:    :+:   */
+/*   lookup_err_msg.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 01:50:22 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/24 23:04:52 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:10:55 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERR_MSG_LOOKUP_H
-# define ERR_MSG_LOOKUP_H
+#ifndef LOOKUP_ERR_MSG_H
+# define LOOKUP_ERR_MSG_H
 
 # include <stddef.h>
 # include "enum/e_ret.h"

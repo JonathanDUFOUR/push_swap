@@ -6,15 +6,15 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/28 09:20:23 by jodufour          #+#    #+#              #
-#    Updated: 2021/08/26 22:19:44 by jodufour         ###   ########.fr        #
+#    Updated: 2022/01/01 21:23:51 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ######################################
 #              COMMANDS              #
 ######################################
-CC					=	clang -c -o
-LINK				=	clang -o
+CC					=	clang -c
+LINK				=	clang
 MKDIR				=	mkdir -p
 RM					=	rm -rf
 
@@ -32,15 +32,14 @@ OBJ_DIR				=	objs/
 PS_OBJ_DIR			=	push_swap/
 CHK_OBJ_DIR			=	checker/
 CMN_OBJ_DIR			=	common/
-INC_DIR				=	includes
 PRIV_INC_DIR		=	private
 
 FT_IO_DIR			=	libft_io/
-FT_IO_INC_DIR		=	includes
+FT_IO_INC_DIR		=	include
 FT_IO_INC_DIR		:=	${addprefix ${FT_IO_DIR}, ${FT_IO_INC_DIR}}
 
 FT_STRING_DIR		=	libft_string/
-FT_STRING_INC_DIR	=	includes
+FT_STRING_INC_DIR	=	include
 FT_STRING_INC_DIR	:=	${addprefix ${FT_STRING_DIR}, ${FT_STRING_INC_DIR}}
 
 #######################################
@@ -165,7 +164,6 @@ DEPS				+=	${CMN_OBJ:.o=.d}
 #######################################
 CFLAGS				=	-Wall -Wextra -Werror
 CFLAGS				+=	-MMD -MP
-CFLAGS				+=	-I${INC_DIR}
 CFLAGS				+=	-I${PRIV_INC_DIR}
 CFLAGS				+=	-I${FT_IO_INC_DIR}
 CFLAGS				+=	-I${FT_STRING_INC_DIR}
@@ -173,26 +171,26 @@ CFLAGS				+=	-I${FT_STRING_INC_DIR}
 LDFLAGS				=	-L${FT_IO_DIR} -lft_io
 LDFLAGS				+=	-L${FT_STRING_DIR} -lft_string
 
-ifeq (${DEBUG}, true)
+ifeq (${DEBUG}, 1)
 	CFLAGS	+=	-g
 endif
 
 #######################################
 #                RULES                #
 #######################################
-${NAME}:	${PS_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
-	${LINK} $@ ${PS_OBJ} ${CMN_OBJ} ${LDFLAGS}
+${NAME}: ${PS_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
+	${LINK} ${PS_OBJ} ${CMN_OBJ} ${LDFLAGS} ${OUTPUT_OPTION}
 
-${CHECKER}:	${CHK_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
-	${LINK} $@ ${CHK_OBJ} ${CMN_OBJ} ${LDFLAGS}
+${CHECKER}: ${CHK_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
+	${LINK} ${CHK_OBJ} ${CMN_OBJ} ${LDFLAGS} ${OUTPUT_OPTION}
 
-all:	${NAME} ${CHECKER}
+all: ${NAME} ${CHECKER}
 
 -include ${DEPS}
 
-${OBJ_DIR}%.o:	${SRC_DIR}%.c
+${OBJ_DIR}%.o: ${SRC_DIR}%.c
 	@${MKDIR} ${@D}
-	${CC} $@ ${CFLAGS} $<
+	${CC} ${CFLAGS} $< ${OUTPUT_OPTION}
 
 ${FT_IO_A}:
 	@${MAKE} ${@F} -C ${@D}
@@ -200,38 +198,19 @@ ${FT_IO_A}:
 ${FT_STRING_A}:
 	@${MAKE} ${@F} -C ${@D}
 
+-include /home/jodufour/Templates/mk_files/coffee.mk
+-include /home/jodufour/Templates/mk_files/norm.mk
+
 clean:
-	${RM} ${OBJ_DIR}
+	${RM} ${OBJ_DIR} ${NAME} ${CHECKER}
 
 fclean:
 	${RM} ${OBJ_DIR} ${NAME} ${CHECKER}
 	@${MAKE} $@ -C ${FT_IO_DIR}
 	@${MAKE} $@ -C ${FT_STRING_DIR}
 
+re: clean all
 
-re:	fclean all
-
-coffee:
-	@echo '                                              '
-	@echo '                   "   "                      '
-	@echo '                  " " " "                     '
-	@echo '                 " " " "                      '
-	@echo '         _.-==="-"""""-"===-._                '
-	@echo '        |=___   "~"~"~"   ___=|=,.            '
-	@echo '        |    """======="""    |  \\           '
-	@echo '        |                     |   ||          '
-	@echo '        |                     |   ||          '
-	@echo '        |                     |   ||          '
-	@echo '        |                     |   ||          '
-	@echo '        |                     |  //           '
-	@echo '         \                   /=="`            '
-	@echo '          \                 /                 '
-	@echo '           `"--._______.--"`                  '
-	@echo '                                              '
-
-norm:
-	@norminette ${SRC_DIR} ${INC_DIR} ${PRIV_INC_DIR} | grep 'Error' ; true
-	@${MAKE} $@ -C ${FT_IO_DIR}
-	@${MAKE} $@ -C ${FT_STRING_DIR}
+fre: fclean all 
 
 .PHONY:	all clean fclean re coffee norm

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_cancel_lookup.h                               :+:      :+:    :+:   */
+/*   lookup_find_cancel.h                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 17:05:38 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:27:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:11:15 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIND_CANCEL_LOOKUP_H
-# define FIND_CANCEL_LOOKUP_H
+#ifndef LOOKUP_FIND_CANCEL_H
+# define LOOKUP_FIND_CANCEL_H
 
 # include "type/t_step.h"
 # include "enum/e_op.h"

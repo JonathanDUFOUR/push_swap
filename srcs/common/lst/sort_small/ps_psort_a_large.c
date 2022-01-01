@@ -6,12 +6,12 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 21:30:05 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/20 15:16:23 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/01/01 21:17:17 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "lookup_do_op.h"
 #include "type/t_ans.h"
-#include "do_op_lookup.h"
 #include "enum/e_ret.h"
 
 /*
