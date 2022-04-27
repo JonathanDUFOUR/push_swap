@@ -6,12 +6,12 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 04:10:09 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/24 00:32:14 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "type/t_ans.h"
+#include "t_ans.h"
 
 static void	ps_preliminaries(t_ans *ans, t_step *step)
 {

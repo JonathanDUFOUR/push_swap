@@ -6,16 +6,16 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 17:03:10 by jodufour          #+#    #+#             */
-/*   Updated: 2022/01/01 21:17:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:12:15 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lookup_do_op.h"
-#include "type/t_ans.h"
-#include "type/t_lst.h"
-#include "enum/e_lst_id.h"
-#include "enum/e_ret.h"
-#include "enum/e_op.h"
+#include "t_ans.h"
+#include "t_lst.h"
+#include "e_lst_id.h"
+#include "e_ret.h"
+#include "e_op.h"
 
 int	ps_psort_a_large(t_lst *a, t_ans *const ans);
 int	ps_rsort_a_large(t_lst *a, t_ans *const ans);

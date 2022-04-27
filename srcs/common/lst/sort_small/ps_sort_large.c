@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:54 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/20 16:30:13 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "type/t_ans.h"
-#include "type/t_lst.h"
-#include "enum/e_ret.h"
+#include "t_ans.h"
+#include "t_lst.h"
+#include "e_ret.h"
 
 int		ps_psort_a_large_acb(t_ans *const ans);
 int		ps_psort_a_large_bac(t_ans *const ans);

@@ -6,15 +6,15 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 19:04:55 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/26 22:20:04 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_io.h"
 #include "ft_string.h"
 #include "push_swap.h"
-#include "type/t_lst.h"
-#include "enum/e_ret.h"
+#include "t_lst.h"
+#include "e_ret.h"
 
 static void	ps_fill_nb(char *nb, int n)
 {

@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 22:00:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/26 22:12:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:20:24 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_io.h"
 #include "push_swap.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 int	ps_check_format(char const **av)
 {

@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 17:55:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/19 10:13:09 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:06:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "type/t_step.h"
-#include "enum/e_op.h"
+#include "t_step.h"
+#include "e_op.h"
 
 static bool	disturb_del(int op)
 {

@@ -6,11 +6,11 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 02:32:43 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:26:22 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "type/t_lst.h"
+#include "t_lst.h"
 
 void	ps_lst_push_back(t_lst *lst, t_elem *elem)
 {

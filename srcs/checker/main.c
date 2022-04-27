@@ -6,15 +6,15 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 04:58:41 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/27 01:08:07 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:13:49 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "checker.h"
-#include "enum/e_ret.h"
-#include "type/t_lst.h"
+#include "e_ret.h"
+#include "t_lst.h"
 
 int	main(int ac, char const **av)
 {

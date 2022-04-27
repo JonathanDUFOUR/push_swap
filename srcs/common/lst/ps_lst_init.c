@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 08:51:10 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:27:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "enum/e_ret.h"
-#include "type/t_lst.h"
+#include "e_ret.h"
+#include "t_lst.h"
 
 int	ps_lst_init(t_lst *lst, int n)
 {

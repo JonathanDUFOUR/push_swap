@@ -6,12 +6,12 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 14:34:06 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:27:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:08:37 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "type/t_step.h"
-#include "enum/e_op.h"
+#include "t_step.h"
+#include "e_op.h"
 
 bool	ps_are_deletable(t_step *action, t_step *cancel)
 {

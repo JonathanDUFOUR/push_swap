@@ -6,14 +6,14 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 15:43:02 by jodufour          #+#    #+#             */
-/*   Updated: 2022/01/01 21:13:35 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:10:51 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "type/t_ans.h"
 #include "lookup_put_op.h"
-#include "enum/e_op.h"
+#include "t_ans.h"
+#include "e_op.h"
 
 void	ps_ans_print(t_ans *ans)
 {

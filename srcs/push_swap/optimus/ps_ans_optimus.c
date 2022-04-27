@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 03:54:58 by jodufour          #+#    #+#             */
-/*   Updated: 2022/01/01 21:12:02 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:08:34 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lookup_find_cancel.h"
-#include "type/t_ans.h"
-#include "enum/e_op.h"
+#include "t_ans.h"
+#include "e_op.h"
 
 static t_step	*find_cancel(t_step *action)
 {

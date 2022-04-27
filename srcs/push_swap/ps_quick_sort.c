@@ -6,16 +6,16 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 14:34:51 by jodufour          #+#    #+#             */
-/*   Updated: 2022/01/01 21:12:39 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:10:08 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "type/t_lst.h"
-#include "type/t_ans.h"
 #include "lookup_do_op.h"
-#include "enum/e_lst_id.h"
-#include "enum/e_ret.h"
+#include "t_lst.h"
+#include "t_ans.h"
+#include "e_lst_id.h"
+#include "e_ret.h"
 
 static int	ps_do_right_sort(t_lst *lst, size_t size, int lst_id)
 {

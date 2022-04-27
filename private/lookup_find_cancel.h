@@ -6,15 +6,15 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 17:05:38 by jodufour          #+#    #+#             */
-/*   Updated: 2022/01/01 21:11:15 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:09:16 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LOOKUP_FIND_CANCEL_H
 # define LOOKUP_FIND_CANCEL_H
 
-# include "type/t_step.h"
-# include "enum/e_op.h"
+# include "t_step.h"
+# include "e_op.h"
 
 typedef struct s_find_cancel	t_find_cancel;
 

@@ -6,14 +6,14 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 20:39:43 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/18 02:27:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:12:59 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdint.h>
-#include "type/t_lst.h"
-#include "enum/e_count.h"
+#include "t_lst.h"
+#include "e_count.h"
 
 static int	ps_get_count(t_lst *lst, size_t size, int n, int edge)
 {

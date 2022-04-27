@@ -6,16 +6,16 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 09:37:03 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/26 22:19:06 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:04:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "type/t_lst.h"
-# include "type/t_ans.h"
-# include "type/t_int.h"
+# include "t_lst.h"
+# include "t_ans.h"
+# include "t_int.h"
 
 int		ps_check_args(char const **av);
 int		ps_check_format(char const **av);

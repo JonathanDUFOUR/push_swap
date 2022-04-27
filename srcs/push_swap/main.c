@@ -6,16 +6,16 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 09:34:49 by jodufour          #+#    #+#             */
-/*   Updated: 2021/08/26 18:07:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:09:36 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "push_swap.h"
-#include "type/t_ans.h"
-#include "type/t_lst.h"
-#include "enum/e_lst_id.h"
-#include "enum/e_ret.h"
+#include "t_ans.h"
+#include "t_lst.h"
+#include "e_lst_id.h"
+#include "e_ret.h"
 
 int	main(int const ac, char const **av)
 {
