@@ -6,14 +6,14 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/28 09:20:23 by jodufour          #+#    #+#              #
-#    Updated: 2022/01/01 21:23:51 by jodufour         ###   ########.fr        #
+#    Updated: 2022/05/19 02:56:55 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ######################################
 #              COMMANDS              #
 ######################################
-CC					=	clang -c
+CC					=	clang
 LINK				=	clang
 MKDIR				=	mkdir -p
 RM					=	rm -rf
@@ -21,8 +21,8 @@ RM					=	rm -rf
 #######################################
 #             EXECUTABLES             #
 #######################################
-NAME				=	push_swap
-CHECKER				=	checker
+NAME				=	push_swap.out
+CHECKER				=	checker.out
 
 #######################################
 #             DIRECTORIES             #
@@ -155,14 +155,15 @@ CMN_OBJ				=	${CMN_SRC:.c=.o}
 CMN_OBJ				:=	${addprefix ${CMN_OBJ_DIR}, ${CMN_OBJ}}
 CMN_OBJ				:=	${addprefix ${OBJ_DIR}, ${CMN_OBJ}}
 
-DEPS				=	${PS_OBJ:.o=.d}
-DEPS				+=	${CHK_OBJ:.o=.d}
-DEPS				+=	${CMN_OBJ:.o=.d}
+DEP					=	${PS_OBJ:.o=.d}
+DEP					+=	${CHK_OBJ:.o=.d}
+DEP					+=	${CMN_OBJ:.o=.d}
 
 #######################################
 #                FLAGS                #
 #######################################
-CFLAGS				=	-Wall -Wextra -Werror
+CFLAGS				=	-c
+CFLAGS				+=	-Wall -Wextra -Werror
 CFLAGS				+=	-MMD -MP
 CFLAGS				+=	-I${PRIV_INC_DIR}
 CFLAGS				+=	-I${FT_IO_INC_DIR}
@@ -178,6 +179,8 @@ endif
 #######################################
 #                RULES                #
 #######################################
+.PHONY: all clean fclean re fre
+
 ${NAME}: ${PS_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
 	${LINK} ${PS_OBJ} ${CMN_OBJ} ${LDFLAGS} ${OUTPUT_OPTION}
 
@@ -186,20 +189,14 @@ ${CHECKER}: ${CHK_OBJ} ${CMN_OBJ} ${FT_IO_A} ${FT_STRING_A}
 
 all: ${NAME} ${CHECKER}
 
--include ${DEPS}
+-include ${DEP}
 
 ${OBJ_DIR}%.o: ${SRC_DIR}%.c
 	@${MKDIR} ${@D}
-	${CC} ${CFLAGS} $< ${OUTPUT_OPTION}
+	${CC} $< ${CFLAGS} ${OUTPUT_OPTION}
 
-${FT_IO_A}:
+${FT_IO_A} ${FT_STRING_A}:
 	@${MAKE} ${@F} -C ${@D}
-
-${FT_STRING_A}:
-	@${MAKE} ${@F} -C ${@D}
-
--include /home/jodufour/Templates/mk_files/coffee.mk
--include /home/jodufour/Templates/mk_files/norm.mk
 
 clean:
 	${RM} ${OBJ_DIR} ${NAME} ${CHECKER}
@@ -211,6 +208,7 @@ fclean:
 
 re: clean all
 
-fre: fclean all 
+fre: fclean all
 
-.PHONY:	all clean fclean re coffee norm
+-include ${HOME}/Templates/mk_files/coffee.mk
+-include ${HOME}/Templates/mk_files/norm.mk
