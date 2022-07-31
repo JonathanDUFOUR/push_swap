@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXEC="./push_swap"
+EXEC="./push_swap.out"
 
 RED="\e[31m"
 GREEN="\e[32m"
@@ -10,7 +10,7 @@ MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[0m"
 
-PAD=40
+PAD=44
 TMP=tmp
 
 function OK { printf "$GREEN[OK]$WHITE\n" ;}
