@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/28 09:20:23 by jodufour          #+#    #+#              #
-#    Updated: 2022/05/19 02:56:55 by jodufour         ###   ########.fr        #
+#    Updated: 2022/10/29 07:27:32 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,29 +27,29 @@ CHECKER				=	checker.out
 #######################################
 #             DIRECTORIES             #
 #######################################
-SRC_DIR				=	srcs/
-OBJ_DIR				=	objs/
-PS_OBJ_DIR			=	push_swap/
-CHK_OBJ_DIR			=	checker/
-CMN_OBJ_DIR			=	common/
+SRC_DIR				=	srcs
+OBJ_DIR				=	objs
+PS_OBJ_DIR			=	push_swap
+CHK_OBJ_DIR			=	checker
+CMN_OBJ_DIR			=	common
 PRIV_INC_DIR		=	private
 
-FT_IO_DIR			=	libft_io/
+FT_IO_DIR			=	libft_io
 FT_IO_INC_DIR		=	include
-FT_IO_INC_DIR		:=	${addprefix ${FT_IO_DIR}, ${FT_IO_INC_DIR}}
+FT_IO_INC_DIR		:=	${addprefix ${FT_IO_DIR}/, ${FT_IO_INC_DIR}}
 
-FT_STRING_DIR		=	libft_string/
+FT_STRING_DIR		=	libft_string
 FT_STRING_INC_DIR	=	include
-FT_STRING_INC_DIR	:=	${addprefix ${FT_STRING_DIR}, ${FT_STRING_INC_DIR}}
+FT_STRING_INC_DIR	:=	${addprefix ${FT_STRING_DIR}/, ${FT_STRING_INC_DIR}}
 
 #######################################
 #              LIBRARIES              #
 #######################################
 FT_IO_A				=	libft_io.a
-FT_IO_A				:=	${addprefix ${FT_IO_DIR}, ${FT_IO_A}}
+FT_IO_A				:=	${addprefix ${FT_IO_DIR}/, ${FT_IO_A}}
 
 FT_STRING_A			=	libft_string.a
-FT_STRING_A			:=	${addprefix ${FT_STRING_DIR}, ${FT_STRING_A}}
+FT_STRING_A			:=	${addprefix ${FT_STRING_DIR}/, ${FT_STRING_A}}
 
 ######################################
 #            SOURCE FILES            #
@@ -144,16 +144,16 @@ CMN_SRC				=	\
 #            OBJECT FILES            #
 ######################################
 PS_OBJ				=	${PS_SRC:.c=.o}
-PS_OBJ				:=	${addprefix ${PS_OBJ_DIR}, ${PS_OBJ}}
-PS_OBJ				:=	${addprefix ${OBJ_DIR}, ${PS_OBJ}}
+PS_OBJ				:=	${addprefix ${PS_OBJ_DIR}/, ${PS_OBJ}}
+PS_OBJ				:=	${addprefix ${OBJ_DIR}/, ${PS_OBJ}}
 
 CHK_OBJ				=	${CHK_SRC:.c=.o}
-CHK_OBJ				:=	${addprefix ${CHK_OBJ_DIR}, ${CHK_OBJ}}
-CHK_OBJ				:=	${addprefix ${OBJ_DIR}, ${CHK_OBJ}}
+CHK_OBJ				:=	${addprefix ${CHK_OBJ_DIR}/, ${CHK_OBJ}}
+CHK_OBJ				:=	${addprefix ${OBJ_DIR}/, ${CHK_OBJ}}
 
 CMN_OBJ				=	${CMN_SRC:.c=.o}
-CMN_OBJ				:=	${addprefix ${CMN_OBJ_DIR}, ${CMN_OBJ}}
-CMN_OBJ				:=	${addprefix ${OBJ_DIR}, ${CMN_OBJ}}
+CMN_OBJ				:=	${addprefix ${CMN_OBJ_DIR}/, ${CMN_OBJ}}
+CMN_OBJ				:=	${addprefix ${OBJ_DIR}/, ${CMN_OBJ}}
 
 DEP					=	${PS_OBJ:.o=.d}
 DEP					+=	${CHK_OBJ:.o=.d}
@@ -191,7 +191,7 @@ all: ${NAME} ${CHECKER}
 
 -include ${DEP}
 
-${OBJ_DIR}%.o: ${SRC_DIR}%.c
+${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
 	@${MKDIR} ${@D}
 	${CC} $< ${CFLAGS} ${OUTPUT_OPTION}
 
