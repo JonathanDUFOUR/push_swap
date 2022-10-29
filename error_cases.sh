@@ -2,19 +2,20 @@
 
 EXEC="./push_swap.out"
 
-RED="\e[31m"
-GREEN="\e[32m"
-YELLOW="\e[33m"
-BLUE="\e[34m"
-MAGENTA="\e[35m"
-CYAN="\e[36m"
-WHITE="\e[0m"
+RED="\e[38;2;255;0;0m"
+GREEN="\e[38;2;0;255;0m"
+YELLOW="\e[38;2;255;255;0m"
+BLUE="\e[38;2;0;0;255m"
+MAGENTA="\e[38;2;255;0;255m"
+CYAN="\e[38;2;0;255;255m"
+WHITE="\e[38;2;255;255;255m"
+RESET="\e[0m"
 
 PAD=44
 TMP=tmp
 
-function OK { printf "$GREEN[OK]$WHITE\n" ;}
-function KO { printf "$RED[KO]$WHITE\n" ;}
+function OK { printf "$GREEN[OK]$RESET\n" ;}
+function KO { printf "$RED[KO]$RESET\n" ;}
 
 # No args
 function checkNoArgs
@@ -23,7 +24,7 @@ function checkNoArgs
 	printf "#################################################################\n"
 	printf "#                         CHECK NO ARGS                         #\n"
 	printf "#################################################################\n"
-	printf $WHITE
+	printf $RESET
 
 	printf "%-*s: " $PAD "$EXEC"
 	$EXEC > /dev/null 2>&1
@@ -49,7 +50,7 @@ function checkNotDigital
 	printf "################################################################\n"
 	printf "#                    CHECK NOT DIGITAL ARGS                    #\n"
 	printf "################################################################\n"
-	printf $WHITE
+	printf $RESET
 
 	printf "%-*s: " $PAD "$EXEC abc"
 	$EXEC abc 2>&1 | grep --quiet "Error"
@@ -79,7 +80,7 @@ function checkOverLimitsInt
 	printf "################################################################\n"
 	printf "#                       CHECK INT LIMITS                       #\n"
 	printf "################################################################\n"
-	printf $WHITE
+	printf $RESET
 
 	printf "%-*s: " $PAD "$EXEC 2147483648"
 	$EXEC 2147483648 2>&1 | grep --quiet "Error"
@@ -108,7 +109,7 @@ function checkNotUniq
 	printf "#################################################################\n"
 	printf "#                      CHECK NOT UNIQ ARGS                      #\n"
 	printf "#################################################################\n"
-	printf $WHITE
+	printf $RESET
 
 	printf "%-*s: " $PAD "$EXEC 1 2 3 4 5 6 7 8 9 1"
 	$EXEC 1 2 3 4 5 6 7 8 9 1 2>&1 | grep --quiet "Error" 2>&1
@@ -129,7 +130,7 @@ function checkStderr
 	printf "#################################################################\n"
 	printf "#                      CHECK STDERR OUTPUT                      #\n"
 	printf "#################################################################\n"
-	printf $WHITE
+	printf $RESET
 
 	printf "%-*s: " $PAD "$EXEC 1 2 3 4 5 6 7 8 9 1"
 	$EXEC 1 2 3 4 5 6 7 8 9 1 > /dev/null 2>$TMP ; grep --quiet "Error" $TMP
