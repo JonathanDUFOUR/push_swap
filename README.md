@@ -1,5 +1,5 @@
 # push_swap
-![Project illustration](illustration.gif "No time to waste, let's sort !")
+![Project illustration](illustration.gif "No time to waste, let's sort !")<br>
 This project is the 6th of the 42 School cursus.
 
 # Description
